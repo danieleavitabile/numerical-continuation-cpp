@@ -1,0 +1,15 @@
+AbstractNonlinearProblem.o: AbstractNonlinearProblem.cpp \
+ AbstractNonlinearProblem.hpp
+AbstractNonlinearProblemJacobian.o: AbstractNonlinearProblemJacobian.cpp \
+ AbstractNonlinearProblemJacobian.hpp
+AbstractNonlinearSolver.o: AbstractNonlinearSolver.cpp \
+ AbstractNonlinearSolver.hpp
+NewtonSolver.o: NewtonSolver.cpp NewtonSolver.hpp \
+ AbstractNonlinearProblem.hpp AbstractNonlinearProblemJacobian.hpp \
+ ConvergenceCriterion.hpp AbstractNonlinearSolver.hpp
+ConvergenceCriterion.o: ConvergenceCriterion.cpp ConvergenceCriterion.hpp
+Fold.o: Fold.cpp Fold.hpp AbstractNonlinearProblem.hpp \
+ AbstractNonlinearProblemJacobian.hpp
+Driver.o: Driver.cpp AbstractNonLinearSolver.hpp NewtonSolver.hpp \
+ AbstractNonlinearProblem.hpp AbstractNonlinearProblemJacobian.hpp \
+ ConvergenceCriterion.hpp AbstractNonlinearSolver.hpp Fold.hpp
